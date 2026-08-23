@@ -126,6 +126,10 @@ def buscar_archivos_video(carpeta):
             and archivo.suffix.lower() in VIDEO_EXTENSIONS
         ):
             archivos.append(archivo)
+        elif archivo.is_dir():
+            archivos.extend(
+                buscar_archivos_video(archivo)
+            )
 
     # Ordenamos alfabéticamente
     return sorted(
@@ -306,7 +310,7 @@ def crear_plan_renombrado(
 
     episodios_detectados = []
 
-    print("\n🔎 Analizando archivos...\n")
+    print("\n Analizando archivos...\n")
 
     for archivo in archivos:
 
@@ -587,7 +591,7 @@ def main():
     # ========================================================
     # BUSCAR ARCHIVOS
     # ========================================================
-
+        
     archivos = buscar_archivos_video(
         carpeta
     )
@@ -602,7 +606,7 @@ def main():
         return
 
     print(
-        f"\n🎬 Se han encontrado "
+        f"\n Se han encontrado "
         f"{len(archivos)} archivos de vídeo."
     )
 
@@ -720,7 +724,7 @@ def main():
     # ========================================================
 
     print(
-        "\n🚀 Renombrando archivos...\n"
+        "\n Renombrando archivos...\n"
     )
 
     try:
