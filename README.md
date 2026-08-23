@@ -82,13 +82,13 @@ py --version
 ### Clonar el repositorio
 
 ```
-git clone https://github.com/paula-ayllon-perez/CambiarNombrePlex.git
+git clone https://github.com/paula-ayllon-perez/RenombrarArchivosPlex.git
 ```
 
 Entrar en el proyecto:
 
 ```
-cd CambiarNombrePlex
+cd RenombrarArchivosPlex
 ```
 
 ## ▶️ Uso
@@ -96,12 +96,12 @@ cd CambiarNombrePlex
 Ejecuta:
 
 ```
-py renombrar_plex.py
+py renombrarArchivosPlex.py
 ```
 
 La aplicación solicitará la carpeta que contiene los episodios:
 
-Introduce la ruta de la carpeta donde están los capítulos:  
+Introduce la ruta de la carpeta principal donde están los capítulos:  
 \> D:\\Series\\Solo Leveling
 
 El nombre de la carpeta se utilizará automáticamente como nombre de la serie.
@@ -111,7 +111,7 @@ A continuación, se indicará la temporada:
 Número de temporada:  
 \> 1
 
-La aplicación analizará los archivos y mostrará una vista previa:
+La aplicación analizará los archivos y las subcarpetas y mostrará una vista previa:
 
 \======================================================================  
 VISTA PREVIA DE LOS CAMBIOS  
@@ -135,7 +135,7 @@ Finalmente, solicitará confirmación antes de realizar los cambios.
 
 CambiarNombrePlex/  
 │  
-├── renombrar\_plex.py  
+├── renombrarArchivosPlex.py
 ├── README.md  
 └── ...
 
